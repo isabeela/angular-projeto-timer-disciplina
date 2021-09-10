@@ -1,0 +1,8 @@
+<app-navbar name="{{name}}"> </app-navbar>
+<div class="timebutton">
+  <span>{{ timer.getCount() }}s</span>
+  <button (click)="timer.start(1000)">Iniciar</button>
+  <button (click)="timer.stop()">Parar</button>
+  <button (click)="timer.resetT()">Zerar</button>
+</div>
+<router-outlet></router-outlet>

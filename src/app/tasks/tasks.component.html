@@ -1,0 +1,29 @@
+<div class="disc">
+  <h2>Lista de Disciplinas</h2>
+  <input #input type="text" />
+  <button class="add" (click)="this.tasks.add(input.value); input.value='';">
+    Adicionar
+  </button>
+  <button class="rem" (click)="this.tasks.remove(0); input.value='';">
+    Excluir
+  </button>
+</div>
+<ul>
+  <li *ngFor="let task of this.tasks.getList(), index as i">
+    {{task.title}}
+  </li>
+</ul>
+<div class="table-fl">
+  <table>
+    <thead>
+      <th>Disciplina</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of this.disci.getListd(), index as i">
+        <td>
+          {{disci.listd[i]}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

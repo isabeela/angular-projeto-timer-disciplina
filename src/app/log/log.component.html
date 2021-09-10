@@ -1,0 +1,8 @@
+<h2>Log</h2>
+<p>Log de recursos do aplicativo</p>
+<button (click)="logger.clear()">Limpar Avisos</button>
+<ul>
+  <li *ngFor="let message of this.logger.messages">
+    {{message}}
+  </li>
+</ul>
